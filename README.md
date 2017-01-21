@@ -9,7 +9,7 @@ See full documentations of the projects in:
 4. [vue-resource](https://github.com/pagekit/vue-resource)
 
 ## Run
-To run this project, was used nginx server. For more detail access [here](https://nginx.org/).
+To run this project, was used nginx server. For more details access [here](https://nginx.org/).
 
 ```
    start nginx (on windows)
