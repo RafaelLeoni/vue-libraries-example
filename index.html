@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Teste do Vue</title>
+
+  <meta name="description" id="desc" content="Main page">
+
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+	<!-- Import vue and vue router-->
+  <script src="vue.js"></script>
+  <script src="vue-router.js"></script>
+  <script src="vue-head.js"></script>
+  <script src="vue-http.js"></script>
+
+  <!-- Components -->
+  <script src="user.component.js"></script>
+  <script src="user-home.component.js"></script>
+  <script src="user-profile.component.js"></script>
+  <script src="user-posts.component.js"></script>
+  <script src="router.component.js"></script>
+
+  <!-- Main tag for the application -->
+  <div id="app">
+  	<h1>Site Header Navbar</h1>
+
+  	<button @click="changePath('rafa')">Login Rafa</button>
+  	<button @click="changePath('glauco')">Login Glauco</button>
+  	<button @click="changePath('leo')">Login Leo</button>
+
+  	<router-view></router-view>
+
+  	<br><br>
+  	<footer>Site footer</footer>
+  </div>
+
+  <!-- Start vue instance -->
+  <script>
+		const app = new Vue({ 
+			el: '#app',
+			methods: {
+				changePath: function(name) {
+					router.replace({name: 'user', params: {id: name}})
+				}
+			},
+			router 
+		})
+  </script>
+</body>
+</html>

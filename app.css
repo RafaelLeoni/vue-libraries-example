@@ -1,0 +1,26 @@
+/* Style the list */
+ul.tab {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Style the links inside the list items */
+ul.tab li {
+    float: left;
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 2px 2px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+/* Change background color of links on hover */
+ul.tab li:hover {background-color: #ddd;}
+
+/* Create an active/current tablink class */
+ul.tab li:focus, .active {background-color: #ccc;}
